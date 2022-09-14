@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Button from "../components/Button.astro";
-import { Image, Picture } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 ---
 
 <Layout title="Welcome to Astro">
@@ -35,7 +35,7 @@ import { Image, Picture } from "@astrojs/image/components";
       </div>
       <div class="absolute right-0 top-20 -mr-24 max-w-[645px]">
         <Picture
-          src="/assets/img/denis-bulle-3.png"
+          src="./src/assets/img/denis-bulle-3.png"
           widths={[570, 645, 1200]}
           aspectRatio="1200:1289"
           loading="eager"
