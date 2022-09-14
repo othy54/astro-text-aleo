@@ -1,0 +1,35 @@
+---
+import Logo from "../components/Logo.astro";
+import Button from "../components/Button.astro";
+
+const menuItems = ["Solutions", "Témoignages", "À propos", "FAQ"];
+---
+
+<header class="pt-6 flex justify-between items-center">
+    <div>
+        <Logo color="#fff" />
+    </div>
+    <div>
+        <ul class="flex gap-10">
+            {
+                menuItems.map((menuItem) => (
+                    <li class="text-white font-extrabold">{menuItem}</li>
+                ))
+            }
+        </ul>
+    </div>
+    <div class="flex gap-4">
+        <Button
+            color="#fff"
+            bgColor="transparent"
+            text="Contactez-nous"
+            border="#FF4235"
+        />
+        <Button
+            color="#FF4235"
+            bgColor="#fff"
+            text="Rappel gratuit"
+            border="white"
+        />
+    </div>
+</header>

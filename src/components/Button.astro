@@ -1,0 +1,29 @@
+---
+export interface Props {
+    text: string;
+    color: string;
+    bgColor: string;
+    border: string;
+}
+
+const {
+    text = "#FF4235",
+    color = "#fff",
+    bgColor = "#FF4235",
+    border = "#fff",
+} = Astro.props;
+---
+
+<div
+    class="button py-3 px-4 hover:px-5 rounded-full transition-[padding] duration-300 text-sm cursor-pointer"
+>
+    {text}
+</div>
+<style define:vars={{ color, bgColor, border }}>
+    .button {
+        color: var(--color);
+        background-color: var(--bgColor);
+        border-color: var(--border);
+        border-width: 2px;
+    }
+</style>

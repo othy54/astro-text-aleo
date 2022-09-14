@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout title="Welcome to Astro">
+    <section class="section bg-primary-500 pb-[107px] rounded-br-[368px]">
+        <div class="container">
+            <Header />
+            <div class="row mt-[157px]">
+                <h1
+                    class="uppercase font-extrabold text-xs tracking-widest text-white"
+                >
+                    L'agence de communication des TPE
+                </h1>
+                <h2
+                    class="italic font-black text-[55px] leading-[58px] text-white mt-4 max-w-[654px]"
+                >
+                    ALEO, la communication enfin accessible à toutes les
+                    entreprises
+                </h2>
+                <div class="flex gap-4 mt-8">
+                    <Button
+                        text="Découvre nos abonnements"
+                        color="#FF4235"
+                        bgColor="#fff"
+                        border="#fff"
+                    />
+                    <Button
+                        text="Contacte-nous"
+                        color="#fff"
+                        bgColor="transparent"
+                        border="#fff"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
