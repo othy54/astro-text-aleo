@@ -6,7 +6,9 @@ import { Picture } from "@astrojs/image/components";
 ---
 
 <Layout title="Welcome to Astro">
-  <section class="section bg-primary-500 pb-[107px] rounded-br-[368px]">
+  <section
+    class="section bg-primary-500 pb-[107px] rounded-br-[368px] relative"
+  >
     <div class="container relative">
       <Header />
       <div class="row mt-[157px]">
@@ -35,13 +37,556 @@ import { Picture } from "@astrojs/image/components";
       </div>
       <div class="absolute right-0 top-20 -mr-24 max-w-[645px]">
         <Picture
-          src="./src/assets/img/denis-bulle-3.png"
+          src={import("../image/denis-bulle-3.png")}
           widths={[570, 645, 1200]}
           aspectRatio="1200:1289"
           loading="eager"
-          formats={["webp"]}
+        />
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+      <div class="relative">
+        <img
+          class="round-text-video"
+          src="/image/round-text-video.svg"
+          alt="texte tournant"
+        /><img
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          src="/image/video-camera.svg"
+          alt="icone de caméra"
         />
       </div>
     </div>
   </section>
+  <section
+    class="section section-info px-0 md:px-10 lg:px-20 flex items-center overflow-hidden lg:overflow-visible mt-[213px] xl:mt-0 relative xl:pt-32"
+  >
+    <div
+      class="lg:container lg:h-[175px] rounded-t-[48px] info-wrapper xl:flex xl:justify-center xl:items-center z-[3] pt-11"
+    >
+      <div class="relative">
+        <img
+          class="hidden lg:block absolute w-[9%] left-[-50px] z-[3]"
+          src="/image/ufo.png"
+          alt="ovni"
+        />
+        <p
+          class="font-extrabold text-sm leading-4 text-center tracking-[0.08em] uppercase text-accent-700 mt-6 mb-4 lg:mt-10 lg:mb-0"
+        >
+          Ils parlent de nous
+        </p>
+        <div class="marquee">
+          <div class="marquee-content gap-6" aria-hidden="true">
+            <div class="marquee-item">
+              <a
+                href="https://www.lefigaro.fr/services/aleo-l-agence-web-n01-dans-la-creation-de-sites-internet-pour-les-tpe-pme-20210716"
+                target="_blank"
+                rel="nofollow noopener"
+                aria-label="link news"
+              >
+                <img src="/image/logo-le-figaro.svg" alt="logo le figaro" />
+              </a>
+            </div>
+            <div class="marquee-item">
+              <a
+                href="https://www.bfmtv.com/economie/professionnels/aleo-l-agence-de-communication-pour-tpe-pme-qui-va-propulser-votre-activite_AN-202107290333.html"
+                target="_blank"
+                rel="nofollow noopener"
+                aria-label="link news"
+              >
+                <img
+                  src="/image/logo-bfm-business.svg"
+                  alt="logo BFM Business"
+                />
+              </a>
+            </div>
+            <div class="marquee-item">
+              <a
+                href="https://www.challenges.fr/entreprise/aleo-l-agence-de-communication-100-dediee-aux-tpe-pme_773971"
+                target="_blank"
+                rel="nofollow noopener"
+                aria-label="link news"
+              >
+                <img src="/image/logo-challenges.svg" alt="logo Challenges" />
+              </a>
+            </div>
+            <div class="marquee-item">
+              <a
+                href="https://www.latribune.fr/supplement/comment-l-agence-web-aleo-souhaite-booster-la-presence-en-ligne-des-tpe-pme-890514.html"
+                target="_blank"
+                rel="nofollow noopener"
+                aria-label="link news"
+              >
+                <img src="image/logo-la-tribune.svg" alt="logo la tribune" />
+              </a>
+            </div>
+            <div class="marquee-item">
+              <a
+                href="https://www.forbes.fr/brandvoice/10000-entreprises-conquises-pour-aleo-lagence-web-n1-des-tpe-pme/"
+                target="_blank"
+                rel="nofollow noopener"
+                aria-label="link news"
+              >
+                <img src="/image/logo-forbes.svg" alt="logo Forbes" />
+              </a>
+            </div>
+            <div class="marquee-item">
+              <a
+                href="https://www.lefigaro.fr/services/aleo-l-agence-web-n01-dans-la-creation-de-sites-internet-pour-les-tpe-pme-20210716"
+                target="_blank"
+                rel="nofollow noopener"
+                aria-label="link news"
+              >
+                <img src="/image/logo-le-figaro.svg" alt="logo le figaro" />
+              </a>
+            </div>
+            <div class="marquee-item">
+              <a
+                href="https://www.bfmtv.com/economie/professionnels/aleo-l-agence-de-communication-pour-tpe-pme-qui-va-propulser-votre-activite_AN-202107290333.html"
+                target="_blank"
+                rel="nofollow noopener"
+                aria-label="link news"
+              >
+                <img
+                  src="/image/logo-bfm-business.svg"
+                  alt="logo BFM Business"
+                />
+              </a>
+            </div>
+            <div class="marquee-item">
+              <a
+                href="https://www.challenges.fr/entreprise/aleo-l-agence-de-communication-100-dediee-aux-tpe-pme_773971"
+                target="_blank"
+                rel="nofollow noopener"
+                aria-label="link news"
+              >
+                <img src="/image/logo-challenges.svg" alt="logo Challenges" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="section section-boost pt-9 xl:pt-40 xl:pb-[132px] pb-12 relative rounded-b-[48px] bg-white z-[3]"
+  >
+    <div class="container">
+      <div class="row">
+        <div>
+          <h2
+            class="section-boost__title font-extrabold text-sm leading-4 text-center tracking-[0.08em] uppercase text-accent-700"
+          >
+            Pour booster ton activité, tu peux :
+          </h2>
+        </div>
+      </div>
+      <div class="row mt-10">
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 xl:flex xl:flex-wrap xl:justify-center gap-4 w-full xl:w-[80%] xl:mx-auto"
+        >
+          <div class="md:col-span-2">
+            <a
+              class="section-boost__content"
+              href=""
+              aria-label="site web & référencement"
+            >
+              <img
+                class="section-boost__icon"
+                loading="lazy"
+                src="/image/icons/icon-laptop.png"
+                alt="icone laptop"
+              />
+              <h3 class="section-boost__text">Créer ton site web</h3>
+            </a>
+          </div>
+          <div class="md:col-span-2">
+            <a
+              class="section-boost__content"
+              href=""
+              aria-label="Publicité Google"
+            >
+              <img
+                class="section-boost__icon"
+                loading="lazy"
+                src="/image/icons/icon-megaphone.png"
+                alt="icone laptop"
+              />
+              <h3 class="section-boost__text">Conquérir plus de clients</h3>
+            </a>
+          </div>
+          <div class="md:col-span-2">
+            <a
+              class="section-boost__content"
+              href=""
+              aria-label="Réseaux sociaux"
+            >
+              <img
+                class="section-boost__icon"
+                loading="lazy"
+                src="/image/icons/icon-hearts.png"
+                alt="icone laptop"
+              />
+              <h3 class="section-boost__text">
+                Développer tes réseaux sociaux
+              </h3>
+            </a>
+          </div>
+          <div class="md:col-span-2">
+            <a
+              class="section-boost__content"
+              href=""
+              aria-label="Identité visuelle"
+            >
+              <img
+                class="section-boost__icon"
+                loading="lazy"
+                src="/image/icons/icon-paintbrush.png"
+                alt="icone laptop"
+              />
+              <h3 class="section-boost__text">Améliorer ton image</h3>
+            </a>
+          </div>
+          <div
+            class="section-boost__content md:col-span-2 md:col-start-2 relative cursor-pointer"
+          >
+            <!-- <LazyCalendly v-if="isCalendlyActive" /> -->
+            <img
+              class="section-boost__icon"
+              loading="lazy"
+              src="/image/icons/icon-speech.png"
+              alt="icone laptop"
+            />
+            <h3 class="section-boost__text">
+              Échanger gratuitement avec nos experts
+            </h3>
+            <img
+              class="absolute hidden md:block left-[-80px]"
+              src="/image/especialy.svg"
+              alt="et surtout"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="section section-com bg-purple-brand -mt-12 pt-28 xl:pt-40 pb-32 overflow-hidden rounded-b-[40px] relative z-[2]"
+  >
+    <div class="container relative">
+      <div
+        class="row grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 md:pb-20 gap-x-10 xl:gap-x-8"
+      >
+        <div
+          class="order-2 md:order-1 flex flex-col xl:col-span-5 xl:col-start-2 justify-center"
+        >
+          <div class="max-w-[450px]">
+            <p class="section-com__surtitle">3, 2, 1 ... Décollage</p>
+            <h2 class="section-com__title">
+              À partir de <span>49&nbsp;€&nbsp;<sup>HT/mois</sup></span> et sans
+              engagement
+            </h2>
+            <p class="section-com__text">
+              Indépendant, petite ou moyenne entreprise, découvre ALEO, l’offre
+              qui va révolutionner la manière dont tu fais ta pub.
+              <br />
+            </p>
+            <p class="section-com__text">
+              Des solutions digitales, professionnelles et clés en main pour
+              booster ton activité.
+            </p>
+            <p class="section-com__text">Attache ta ceinture !</p>
+            <div class="relative mt-4 w-fit-content">
+              <img
+                class="center"
+                loading="lazy"
+                src="/image/seatbelt.svg"
+                alt="ceinture de sécurité"
+              />
+              <img
+                class="opacity-0 section-com__seatbelt-on"
+                loading="lazy"
+                src="/image/seatbelt-on.svg"
+                alt="ceinture de sécurité"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="order-1 md:order-2 -mr-28 relative xl:col-span-5 xl:col-start-8"
+        >
+          <img
+            class="absolute min-w-[170%] top-[-86%] right-[-63%]"
+            src="/image/blobs-blur.png"
+            alt="blur blob"
+          />
+          <img
+            loading="lazy"
+            class="relative"
+            src="/image/mockup-home.png"
+            alt="mockup"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row relative py-40 lg:py-28 md:mb-20">
+      <div class="w-full lg:w-fit-content mx-auto">
+        <p
+          class="text-accent-100 italic font-black text-[44px] md:text-[36px] xl:text-[66px] leading-[50px] text-center md:w-max md:mx-auto"
+        >
+          + de
+          <span class="md:relative inline-block">
+            <span class="relative">10 000</span>
+            <span
+              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-125 md:scale-100 md:w-[250px] block"
+            >
+              <span class="relative block">
+                <img
+                  class="center w-[70%] section-com__wave-two"
+                  loading="lazy"
+                  src="/image/star-home-2.svg"
+                  alt="étoile"
+                />
+
+                <img
+                  class="w-full md:w-auto section-com__wave-one"
+                  loading="lazy"
+                  src="/image/star-home.svg"
+                  alt="étoile"
+                />
+                <img
+                  class="absolute center-x -top-5 w-[30%]"
+                  loading="lazy"
+                  src="/image/space-gun.png"
+                  alt="pistolet espace"
+                />
+              </span>
+            </span>
+          </span>
+          entreprises accompagnées
+        </p>
+      </div>
+    </div>
+  </section>
 </Layout>
+<style lang="postcss">
+  .round-text-video {
+    animation: rotation 8s infinite linear;
+  }
+
+  .info-wrapper {
+    background: linear-gradient(180deg, #e8f4ff 0%, rgba(244, 250, 255, 0) 100%),
+      #fff;
+  }
+
+  .marquee {
+    overflow: hidden;
+  }
+
+  .marquee-content {
+    display: flex;
+    animation: scrolling 10s linear infinite;
+  }
+
+  .marquee-item {
+    flex: 0 0 44vw;
+    margin: 0 1vw;
+
+    @screen md {
+      flex: 0 0 35vw;
+      margin: 0 1vw;
+    }
+
+    @screen lg {
+      flex: 0 0 16vw;
+    }
+  }
+
+  .marquee-item img {
+    display: block;
+    width: 100%;
+  }
+
+  .section-boost {
+    &__content {
+      @apply bg-accent-100;
+
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 16px;
+      transition: 0.3s;
+
+      @screen lg {
+        &:hover {
+          @apply bg-purple-brand;
+
+          padding: 24px 32px;
+
+          & .section-boost__text {
+            @apply text-accent-500;
+          }
+        }
+      }
+
+      @screen xl {
+        width: fit-content;
+      }
+    }
+
+    &__icon {
+      width: 32px;
+      align-self: flex-start;
+    }
+
+    &__text {
+      @apply text-purple-brand;
+
+      font-style: italic;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 24px;
+
+      @screen xl {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .section-com {
+    @apply text-accent-200;
+
+    &__surtitle {
+      font-weight: 800;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    &__title {
+      @apply text-accent-500;
+
+      margin-top: 16px;
+      margin-bottom: 16px;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 40px;
+
+      @screen xl {
+        font-size: 40px;
+        line-height: 44px;
+      }
+
+      & > span {
+        @apply text-accent-50;
+      }
+    }
+
+    &__text {
+      font-weight: 500;
+      line-height: 24px;
+      margin-bottom: 12px;
+    }
+
+    &__list {
+      &-item {
+        margin-bottom: 24px;
+        display: flex;
+        gap: 16px;
+        cursor: pointer;
+      }
+
+      &-title {
+        font-style: italic;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &-text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 8px;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        opacity: 0;
+
+        &--collapse {
+          max-height: 70px;
+          opacity: 1;
+        }
+      }
+    }
+
+    &__image-wrapper {
+      border-radius: 24px;
+      padding: 80px;
+      background: rgba(162, 204, 238, 0.1);
+      box-shadow: inset 1px 1px 4px rgba(162, 204, 238, 0.4);
+
+      & > img {
+        width: 100%;
+      }
+    }
+
+    &__wave-one {
+      animation: wavy 2s alternate infinite ease-in-out;
+    }
+
+    &__wave-two {
+      animation: secondwavy 2s alternate-reverse infinite ease-in-out;
+    }
+  }
+
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-80vw);
+    }
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes wavy {
+    0% {
+      scale: 1;
+      rotate: 0deg;
+    }
+
+    100% {
+      scale: 1.15;
+      rotate: 25deg;
+    }
+  }
+
+  @keyframes secondwavy {
+    0% {
+      transform: translate(-50%, -50%) scale(1) rotate(10deg);
+    }
+
+    100% {
+      transform: translate(-50%, -50%) scale(1.1) rotate(35deg);
+    }
+  }
+</style>
