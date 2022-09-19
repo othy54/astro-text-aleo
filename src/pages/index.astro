@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Button from "../components/Button.astro";
-import { Picture } from "@astrojs/image/components";
+import { Image, Picture } from "@astrojs/image/components";
 ---
 
 <Layout title="Welcome to Astro">
@@ -317,15 +317,18 @@ import { Picture } from "@astrojs/image/components";
         <div
           class="order-1 md:order-2 -mr-28 relative xl:col-span-5 xl:col-start-8"
         >
-          <img
+          <Picture
             class="absolute min-w-[170%] top-[-86%] right-[-63%]"
-            src="/image/blobs-blur.png"
+            src={import("../image/blobs-blur.png")}
+            widths={[1179]}
+            aspectRatio="1:1"
             alt="blur blob"
           />
-          <img
-            loading="lazy"
+          <Picture
             class="relative"
-            src="/image/mockup-home.png"
+            src={import("../image/mockup-home.png")}
+            widths={[436, 693, 1300]}
+            aspectRatio="775:553"
             alt="mockup"
           />
         </div>
