@@ -2,7 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Button from "../components/Button.astro";
-import { Image, Picture } from "@astrojs/image/components";
+import Propulse from "../components/Propulse.vue";
+import { Picture } from "@astrojs/image/components";
 ---
 
 <Layout title="Welcome to Astro">
@@ -333,44 +334,48 @@ import { Image, Picture } from "@astrojs/image/components";
           />
         </div>
       </div>
-    </div>
+      <div class="row relative py-40 lg:py-28 md:mb-20">
+        <div class="w-full lg:w-fit-content mx-auto">
+          <p
+            class="text-accent-100 italic font-black text-[44px] md:text-[36px] xl:text-[66px] leading-[50px] text-center md:w-max md:mx-auto"
+          >
+            + de
+            <span class="md:relative inline-block">
+              <span class="relative">10 000</span>
+              <span
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-125 md:scale-100 md:w-[250px] block"
+              >
+                <span class="relative block">
+                  <img
+                    class="center w-[70%] section-com__wave-two"
+                    loading="lazy"
+                    src="/image/star-home-2.svg"
+                    alt="étoile"
+                  />
 
-    <div class="row relative py-40 lg:py-28 md:mb-20">
-      <div class="w-full lg:w-fit-content mx-auto">
-        <p
-          class="text-accent-100 italic font-black text-[44px] md:text-[36px] xl:text-[66px] leading-[50px] text-center md:w-max md:mx-auto"
-        >
-          + de
-          <span class="md:relative inline-block">
-            <span class="relative">10 000</span>
-            <span
-              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-125 md:scale-100 md:w-[250px] block"
-            >
-              <span class="relative block">
-                <img
-                  class="center w-[70%] section-com__wave-two"
-                  loading="lazy"
-                  src="/image/star-home-2.svg"
-                  alt="étoile"
-                />
-
-                <img
-                  class="w-full md:w-auto section-com__wave-one"
-                  loading="lazy"
-                  src="/image/star-home.svg"
-                  alt="étoile"
-                />
-                <img
-                  class="absolute center-x -top-5 w-[30%]"
-                  loading="lazy"
-                  src="/image/space-gun.png"
-                  alt="pistolet espace"
-                />
+                  <img
+                    class="w-full md:w-auto section-com__wave-one"
+                    loading="lazy"
+                    src="/image/star-home.svg"
+                    alt="étoile"
+                  />
+                  <img
+                    class="absolute center-x -top-5 w-[30%]"
+                    loading="lazy"
+                    src="/image/space-gun.png"
+                    alt="pistolet espace"
+                  />
+                </span>
               </span>
             </span>
-          </span>
-          entreprises accompagnées
-        </p>
+            entreprises accompagnées
+          </p>
+        </div>
+      </div>
+      <div
+        class="rows lg:py-[122px] min-h-[545px] md:min-h-[505px] lg:min-h-[710px] 2xl:min-h-[770px]"
+      >
+        <Propulse client:visible />
       </div>
     </div>
   </section>

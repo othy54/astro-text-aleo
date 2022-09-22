@@ -13,12 +13,16 @@
   "dependencies": {
     "@astrojs/image": "^0.7.0",
     "@astrojs/tailwind": "^1.0.1",
+    "@astrojs/vue": "^1.0.2",
     "@fontsource/nunito": "^4.5.10",
     "astro": "^1.2.3",
+    "gsap": "^3.11.1",
     "i": "^0.3.7",
+    "lottie-web": "^5.9.6",
     "postcss": "^8.4.16",
     "postcss-custom-media": "^8.0.2",
     "postcss-nested": "^5.0.6",
-    "postcss-nesting": "^10.2.0"
+    "postcss-nesting": "^10.2.0",
+    "vue": "^3.2.39"
   }
 }
